@@ -36,16 +36,15 @@ public class StringMethodsImpl implements StringMethods {
             return 1;
         }
 
+        String reversedString = getReversedString(inputString);
+
+        return reversedString.equals(inputString) ? 10 : 0;
+    }
+
+    private static String getReversedString(String inputString) {
         StringBuilder outputString = new StringBuilder(inputString);
         outputString.reverse();
-        String reversedString = outputString.toString();
-
-        if( reversedString.equals(inputString)){
-            return 10;
-        }
-        else {
-            return 0;
-        }
+        return outputString.toString();
     }
 
 }

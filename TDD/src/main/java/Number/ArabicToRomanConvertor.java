@@ -6,7 +6,7 @@ public class ArabicToRomanConvertor implements Convertor {
     private static final int[] DECIMAL_EQUIVALENTS = {100,90,50,40,10,5,4,1};
 
     @Override
-    public String convertArabicToRoman(int arabicNumber) {
+    public String convert(int arabicNumber) {
 
         StringBuilder romanString = new StringBuilder();
 

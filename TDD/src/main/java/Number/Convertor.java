@@ -1,5 +1,5 @@
 package Number;
 
 public interface Convertor {
-    String convertArabicToRoman(int A);
+    String convert(int A);
 }
