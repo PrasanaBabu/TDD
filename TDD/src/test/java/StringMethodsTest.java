@@ -7,6 +7,7 @@ class StringMethodsTest {
 
     StringMethodsImpl temp = new StringMethodsImpl();
 
+
     @Test
     void should_return_sameStringWhenOneCharacterGiven(){
         //String.StringMethods temp = new String.StringMethods();
@@ -75,5 +76,12 @@ class StringMethodsTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    void should_return_abcForremoveDuplicates(){
+        // String.StringMethods temp = new String.StringMethods();
 
+        String expected = "abc";
+        String actual= temp.removeDuplicatesFromString("aabbcc");
+        assertEquals(actual,expected);
+    }
 }

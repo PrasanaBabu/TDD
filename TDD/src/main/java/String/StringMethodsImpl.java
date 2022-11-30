@@ -1,5 +1,7 @@
 package String;
 
+import java.util.Arrays;
+
 public class StringMethodsImpl implements StringMethods {
 
 //Swap the last two Characters in a string
@@ -45,6 +47,30 @@ public class StringMethodsImpl implements StringMethods {
         StringBuilder outputString = new StringBuilder(inputString);
         outputString.reverse();
         return outputString.toString();
+    }
+
+    public String removeDuplicatesFromString(String inputString){
+
+        char[] str =inputString.toCharArray();
+        int k=0;
+        for(int i=0;i< str.length;i++)
+        {
+            int j;
+            for(j=0;j<i;j++)
+            {
+                if(str[i]==str[j])
+                {
+                    break;
+                }
+            }
+            if(i==j)
+            {
+                str[k++]=str[i];
+            }
+        }
+
+
+        return String.valueOf(Arrays.copyOf(str,k));
     }
 
 }
