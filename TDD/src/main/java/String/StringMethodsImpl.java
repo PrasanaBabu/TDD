@@ -4,14 +4,12 @@ import java.util.Arrays;
 
 public class StringMethodsImpl implements StringMethods {
 
-//Swap the last two Characters in a string
     @Override
-    public String lastTwoCars(String str) {
+    public String swapOnlyLastTwoCharacters(String str) {
 
             if (str.length() == 1 || str.length() == 0) {
                 return str;
             }
-
             else {
                 return getStringWithLastTwoCharactersSwapped(str);
             }
@@ -19,6 +17,7 @@ public class StringMethodsImpl implements StringMethods {
 
     private static String getStringWithLastTwoCharactersSwapped(String str) {
         char[] strArray = str.toCharArray();
+
         char temp = strArray[ str.length() - 1 ];
         strArray[ strArray.length - 1 ] = strArray[ strArray.length - 2 ];
         strArray[ strArray.length - 2 ] = temp;
@@ -49,6 +48,7 @@ public class StringMethodsImpl implements StringMethods {
         return outputString.toString();
     }
 
+    @Override
     public String removeDuplicatesFromString(String inputString){
 
         char[] str =inputString.toCharArray();
@@ -68,8 +68,6 @@ public class StringMethodsImpl implements StringMethods {
                 str[k++]=str[i];
             }
         }
-
-
         return String.valueOf(Arrays.copyOf(str,k));
     }
 

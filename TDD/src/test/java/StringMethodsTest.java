@@ -1,18 +1,16 @@
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import String.StringMethodsImpl;
+import String.*;
 
 class StringMethodsTest {
 
-    StringMethodsImpl temp = new StringMethodsImpl();
-
-
+    StringMethods temp = new StringMethodsImpl();
     @Test
     void should_return_sameStringWhenOneCharacterGiven(){
         //String.StringMethods temp = new String.StringMethods();
 
-        String actual = temp.lastTwoCars("a");
+        String actual = temp.swapOnlyLastTwoCharacters("a");
         String expected = "a";
         assertEquals(expected, actual);
 
@@ -22,7 +20,7 @@ class StringMethodsTest {
     void should_Return_reversedStringWhenTwoCharactersGiven(){
         //String.StringMethods temp = new String.StringMethods();
 
-        String actual = temp.lastTwoCars("TI");
+        String actual = temp.swapOnlyLastTwoCharacters("TI");
         String expected = "IT";
         assertEquals(expected, actual);
     }
@@ -34,7 +32,7 @@ class StringMethodsTest {
     void should_return_reversedStringWIthMorethanTwoChars(){
        // String.StringMethods temp = new String.StringMethods();
 
-        String actual = temp.lastTwoCars("FORD");
+        String actual = temp.swapOnlyLastTwoCharacters("FORD");
         String expected = "FODR";
         assertEquals(expected, actual);
 
@@ -43,7 +41,7 @@ class StringMethodsTest {
     void should_return_emptyStringWhenEmptyStringGiven(){
        // String.StringMethods temp = new String.StringMethods();
 
-        String actual = temp.lastTwoCars("");
+        String actual = temp.swapOnlyLastTwoCharacters("");
         String expected = "";
         assertEquals(expected, actual);
     }
