@@ -8,7 +8,6 @@ class StringMethodsTest {
     StringMethods temp = new StringMethodsImpl();
     @Test
     void should_return_sameStringWhenOneCharacterGiven(){
-        //String.StringMethods temp = new String.StringMethods();
 
         String actual = temp.swapOnlyLastTwoCharacters("a");
         String expected = "a";
@@ -18,19 +17,13 @@ class StringMethodsTest {
 
     @Test
     void should_Return_reversedStringWhenTwoCharactersGiven(){
-        //String.StringMethods temp = new String.StringMethods();
 
         String actual = temp.swapOnlyLastTwoCharacters("TI");
         String expected = "IT";
         assertEquals(expected, actual);
     }
-//    Given a String of any length,
-//    return a new String where only the last 2 characters
-//    are swapped.
-
     @Test
     void should_return_reversedStringWIthMorethanTwoChars(){
-       // String.StringMethods temp = new String.StringMethods();
 
         String actual = temp.swapOnlyLastTwoCharacters("FORD");
         String expected = "FODR";
@@ -39,7 +32,6 @@ class StringMethodsTest {
     }
     @Test
     void should_return_emptyStringWhenEmptyStringGiven(){
-       // String.StringMethods temp = new String.StringMethods();
 
         String actual = temp.swapOnlyLastTwoCharacters("");
         String expected = "";
@@ -48,6 +40,7 @@ class StringMethodsTest {
 
     @Test
     void should_Return_0ForNonPalindromeString(){
+
         int expected = 0;
         int actual = temp.palindromeOrNot("abc");
         assertEquals(expected, actual);
@@ -62,7 +55,7 @@ class StringMethodsTest {
     @Test
     void should_return_1whenStringLengthIsOne()
     {
-        int expected = 1;
+        int expected = 10;
         int actual = temp.palindromeOrNot("a");
         assertEquals(expected, actual);
     }

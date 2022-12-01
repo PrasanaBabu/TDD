@@ -33,9 +33,7 @@ public class StringMethodsImpl implements StringMethods {
         if(inputString.isEmpty()) {
             return -1;
         }
-        if(inputString.length() == 1) {
-            return 1;
-        }
+
 
         String reversedString = getReversedString(inputString);
 
